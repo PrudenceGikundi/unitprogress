@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('/service3.jpg');
+      background-size: cover;
+    }
+
+    header {
+      background: url('your-background-image-url') center/cover;
+      color: white;
+      padding: 20px;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 100px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color:aqua;
+      margin: 0 10px;
+    }
+
+    .heading {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .contactus {
+      width: 50%;
+      text-align: center;
+    }
+    .contactus h1 {
+     color: aqua;
+    }
+
+    .myform {
+      width: 50%;
+    }
+
+    form {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navigation">
+      <div class="logo">
+        <img src="/logo2.png" alt="logo" >
+      </div>
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="tours.html">TOURS</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="contact.html">CONTACT US</a>
+      </nav>
+      <div class="logo">
+        <img src="">
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="heading">
+      <div class="contactus">
+        <h1>CONTACT US</h1>
+        <p>Need to get in touch with us? Fill out the form with your inquiry or<br>find the <a href="#">department email</a> you'd like to contact</p>
+      </div>
+      <div class="myform">
+        <form id="contactForm">
+          <input type="text" name="firstName" placeholder="First name" required><br>
+          <input type="text" name="lastName" placeholder="Last name" required><br>
+          <input type="email" name="email" placeholder="Email" required><br>
+          <label for="message">What can we help you with?</label><br>
+          <textarea id="message" name="message" placeholder="Enter your message here" required></textarea><br>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // You can add your form submission logic here
+      alert('Form submitted successfully!');
+      // Reset the form after submission
+      document.getElementById('contactForm').reset();
+    });
+  </script>
+</body>
+</html>
